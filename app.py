@@ -1,17 +1,18 @@
 import streamlit as st
-import plotly.express as px
+import numpy as np
 import pandas as pd
 import geopandas as gpd
+import matplotlib.pyplot as plt
+
+import pickle
 import json
 
 from xgboost import XGBRegressor
-import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
-import plotly.graph_objects as go
 from sklearn.inspection import PartialDependenceDisplay
+
 from plotly.subplots import make_subplots
-import pickle
+import plotly.express as px
+import plotly.graph_objects as go
 
 with open("barrios.geojson", "r") as f:
     barrios_geojson = json.load(f)
