@@ -21,7 +21,7 @@ with open('modelos.pkl', 'rb') as file:
     modelos = pickle.load(file)
 
 st.set_page_config(layout="wide")
-st.title('Alquileres en Valencia')
+st.title('Valencialquila')
 
 pisos = pd.read_excel('pisos.xlsx')
 pisos['Barrio'] = [barrio.upper() for barrio in pisos['Barrio']]
