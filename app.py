@@ -82,10 +82,10 @@ features = ['Planta', 'Exterior', 'Ascensor', 'Habitaciones', 'Superficie']
 def crear_pdp(barrio):
     if barrio == 'TODOS LOS BARRIOS':
         modelo = modelos[barrio]
-        title = f'Influencia de las características en el precio de la vivienda en Valencia (sobre {len(pisos['Barrio'])} muestras)'
+        title = f"Influencia de las características en el precio de la vivienda en Valencia (sobre {len(pisos['Barrio'])} muestras)"
     else:
         modelo = modelos[barrio]
-        title = f'Influencia de las características en el precio de la vivienda en {barrio.title()} (sobre {sum(pisos['Barrio'] == barrio)} muestras)'
+        title = f"Influencia de las características en el precio de la vivienda en {barrio.title()} (sobre {sum(pisos['Barrio'] == barrio)} muestras)"
     pdp = PartialDependenceDisplay.from_estimator(modelo, X, features)
     plt.close()
     fig_pdp1 = make_subplots(rows=1, cols=3, subplot_titles=features[:3])
