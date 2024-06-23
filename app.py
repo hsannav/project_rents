@@ -145,7 +145,7 @@ with st.container():
             habitaciones = st.selectbox('Habitaciones:', [i for i in range(2, 6)])
 
         with col12:
-            planta = st.selectbox('Planta:', [i for i in range(2, 9)])
+            planta = st.selectbox('Planta del piso:', [i for i in range(2, 9)])
 
         with col13:
             exterior = st.selectbox('Exterior:', ['Sí', 'No'])
